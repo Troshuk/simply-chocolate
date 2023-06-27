@@ -1,0 +1,286 @@
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --black: #111;
+    --orange: #FD9222;
+    --violet: #1E1823;
+    --white: #FFF;
+    --gray: #FAFAFA;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+button {
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-title {
+    color: var(--black);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.section-title-accent {
+    color: var(--orange);
+}
+
+/* -------------------- HEADER -------------------- */
+
+.header-logo {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: -0.03em;
+}
+
+.header-logo-accent {
+    font-style: italic;
+}
+
+.header-menu-link {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14x;
+    letter-spacing: -0.02em;
+}
+
+.header-menu-link:is(:hover, :focus) {
+    color: var(--orange);
+}
+
+/* -------------------- HERO -------------------- */
+
+.hero {
+    background: #433f46;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: -0.03em;
+}
+
+.hero-button {
+    background: var(--orange);
+    color: var(--white);
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.hero-link {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-down {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: -0.03em;
+}
+
+/* -------------------- ADVANTAGES -------------------- */
+
+.advantages {
+    background: var(--violet, #1E1823);
+}
+
+.advantages-list {}
+
+.advantages-item {}
+
+.advantages-item-title {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.advantages-item-description {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+/* -------------------- Taste -------------------- */
+
+.taste {}
+
+.taste-title {}
+
+.taste-description {
+    color: var(--black);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+}
+
+.taste-list {}
+
+.taste-item {}
+
+.taste-item-image {}
+
+.taste-item-description {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.taste-item-description.light {
+    color: var(--white);
+}
+
+.taste-item-description.dark {
+    color: var(--black);
+}
+
+/* -------------------- Made -------------------- */
+
+.made {}
+
+.made-title {}
+
+.made-head {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+}
+
+.made-list {}
+
+.made-list-item {}
+
+.made-list-item-description {
+    color: var(--black);
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+}
+
+/* -------------------- Loved -------------------- */
+
+.loved {}
+
+.loved-title {}
+
+.loved-title-accent {
+    color: #FD9222;
+}
+
+.loved-list {}
+
+.loved-list-item {}
+
+.loved-list-title {
+    color: var(--black);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+}
+
+.loved-list-description {
+    color: rgba(17, 17, 17, 0.70);
+    text-align: center;
+    font-size: 14px;
+    font-family: Montserrat;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+}
+
+.loved-button {
+    color: var(--black);
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* -------------------- Footer -------------------- */
+
+.footer {
+    background: var(--violet);
+}
+
+.footer-title {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+}
+
+.footer-contacts {
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-address-list {}
+
+.footer-address-list-item {}
+
+.footer-address-link {
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+}
+
+.footer-navigation {}
+
+.footer-menu {}
+
+.footer-menu-item {}
+
+.footer-menu-link {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+}
