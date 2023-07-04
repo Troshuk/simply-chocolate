@@ -7,8 +7,38 @@
     --gray: #FAFAFA;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
 body {
     font-family: var(--main-font);
+    background-color: var(--gray);
+}
+
+.container {
+    /* use 100% of the page id the width is smaller then max width */
+    width: 100%;
+    max-width: 1166px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Center content inside the container */
+    margin: 0 auto;
+    outline: 2px solid red;
 }
 
 button {
@@ -53,16 +83,37 @@ button {
 
 /* -------------------- HEADER -------------------- */
 
+.header {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    /* Gap between navigation and socials */
+    gap: 90px;
+}
+
 .header-logo {
     color: var(--black);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: -0.03em;
+    /* Align logo icon to be in center */
+    display: flex;
+    align-items: center;
 }
 
 .header-logo-accent {
     font-style: italic;
+}
+
+.header-menu {
+    display: flex;
+    /* Space between menu items */
+    gap: 24px;
 }
 
 .header-menu-link {
@@ -77,10 +128,30 @@ button {
     color: var(--orange);
 }
 
+.header-navigation {
+    display: flex;
+    align-items: center;
+    /* Make header to take the most of the space */
+    flex-grow: 1;
+    /* Align content to have an even space between */
+    justify-content: space-between;
+}
+
+.header-socials {
+    display: flex;
+    /* Space between socials */
+    gap: 18px
+}
+
 /* -------------------- HERO -------------------- */
 
-.hero {
+.hero {}
+
+.hero-container {
     background: #433f46;
+    border-radius: 30px;
+    /* Set padding around container */
+    padding: 380px 40px 40px 40px;
 }
 
 .hero-title {
@@ -89,6 +160,14 @@ button {
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: -0.03em;
+    /* Set title width */
+    max-width: 484px;
+}
+
+.hero-buttons {
+    /* Make buttons to display in the same line */
+    display: flex;
+    align-items: center;
 }
 
 .hero-button {
@@ -97,12 +176,20 @@ button {
     font-size: 14px;
     font-family: inherit;
     font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 100px;
+    border: none;
+    margin-right: 14px;
 }
 
 .hero-link {
     color: var(--white);
     font-size: 14px;
     font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+
 }
 
 .hero-down {
@@ -111,6 +198,9 @@ button {
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.03em;
+    /* Shift button to the right side */
+    display: block;
+    margin-left: auto;
 }
 
 /* -------------------- ADVANTAGES -------------------- */
