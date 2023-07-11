@@ -7,8 +7,45 @@
     --gray: #FAFAFA;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    /* To remove default bottom gap of 4px */
+    display: block;
+}
+
 body {
     font-family: var(--main-font);
+    background-color: var(--gray);
+}
+
+.container {
+    /* use 100% of the page id the width is smaller then max width */
+    width: 100%;
+    /* content width + 15px for each side (left and right) */
+    max-width: 1166px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Center content inside the container */
+    margin: 0 auto;
+    /* Temporary border ouline */
+    outline: 2px solid red;
 }
 
 button {
@@ -53,16 +90,37 @@ button {
 
 /* -------------------- HEADER -------------------- */
 
+.header {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    /* Gap between navigation and socials */
+    gap: 90px;
+}
+
 .header-logo {
     color: var(--black);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: -0.03em;
+    /* Align logo icon to be in center */
+    display: flex;
+    align-items: center;
 }
 
 .header-logo-accent {
     font-style: italic;
+}
+
+.header-menu {
+    display: flex;
+    /* Space between menu items */
+    gap: 24px;
 }
 
 .header-menu-link {
@@ -77,10 +135,32 @@ button {
     color: var(--orange);
 }
 
+.header-navigation {
+    display: flex;
+    align-items: center;
+    /* Make header to take the most of the space */
+    flex-grow: 1;
+    /* Align content to have an even space between */
+    justify-content: space-between;
+}
+
+.header-socials {
+    display: flex;
+    /* Space between socials */
+    gap: 18px
+}
+
 /* -------------------- HERO -------------------- */
 
 .hero {
+    padding-bottom: 79px;
+}
+
+.hero-container {
     background: #433f46;
+    border-radius: 30px;
+    /* Set padding around container */
+    padding: 380px 40px 40px 40px;
 }
 
 .hero-title {
@@ -89,6 +169,14 @@ button {
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: -0.03em;
+    /* Set title width */
+    max-width: 484px;
+}
+
+.hero-buttons {
+    /* Make buttons to display in the same line */
+    display: flex;
+    align-items: center;
 }
 
 .hero-button {
@@ -97,12 +185,20 @@ button {
     font-size: 14px;
     font-family: inherit;
     font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 100px;
+    border: none;
+    margin-right: 14px;
 }
 
 .hero-link {
     color: var(--white);
     font-size: 14px;
     font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+
 }
 
 .hero-down {
@@ -111,35 +207,56 @@ button {
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.03em;
+    /* Shift button to the right side */
+    display: block;
+    margin-left: auto;
 }
 
 /* -------------------- ADVANTAGES -------------------- */
 
 .advantages {
     background: var(--violet, #1E1823);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.advantages-list {}
+.advantages-list {
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    gap: 88px;
+}
 
-.advantages-item {}
+.advantages-item {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 88px * 2) / 3);
+}
 
 .advantages-item-title {
     color: var(--white);
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 18px;
 }
 
 .advantages-item-description {
     color: rgba(255, 255, 255, 0.70);
     font-size: 14px;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.02em;
 }
 
 /* -------------------- Taste -------------------- */
 
-.taste {}
+.taste {
+    padding-top: 93px;
+}
 
-.taste-title {}
+.taste-title {
+    max-width: 411px;
+    /* Center it */
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
 
 .taste-description {
     color: var(--black);
@@ -147,13 +264,28 @@ button {
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
+    max-width: 486px;
+    /* Center it */
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
-.taste-list {}
+.taste-list {
+    display: flex;
+    gap: 19px;
+}
 
-.taste-item {}
+.taste-item {
+    width: calc((100% - 19px * 4) / 4);
+    border-radius: 15px;
+    border: 1px solid var(--orange);
+    background: var(--white);
+    padding: 28px 36px 28px 28px;
+}
 
-.taste-item-image {}
+.taste-item-image {
+    margin-bottom: 36px;
+}
 
 .taste-item-description {
     font-size: 14px;
@@ -173,20 +305,43 @@ button {
 
 /* -------------------- Made -------------------- */
 
-.made {}
+.made {
+    padding-top: 100px;
+}
 
-.made-title {}
+.made-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.made-content {
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 15px;
+    width: 516px;
+}
+
+.made-title {
+    margin-bottom: 50px;
+}
 
 .made-head {
     color: var(--black);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.33;
+    min-width: 360px;
+    padding-bottom: 28px;
 }
 
-.made-list {}
+.made-list {
+    padding-left: 16px;
+    width: 429px;
+}
 
-.made-list-item {}
+.made-list-item:not(:last-child) {
+    margin-bottom: 24px;
+}
 
 .made-list-item-description {
     color: var(--black);
@@ -197,17 +352,36 @@ button {
 
 /* -------------------- Loved -------------------- */
 
-.loved {}
-
-.loved-title {}
-
-.loved-title-accent {
-    color: #FD9222;
+.loved {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.loved-list {}
+.loved-title {
+    margin-bottom: 119px;
+}
 
-.loved-list-item {}
+.loved-title-accent {
+    color: var(--orange);
+}
+
+.loved-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 40px 28px; */
+    column-gap: 28px;
+    row-gap: 40px;
+    margin-bottom: 49px;
+}
+
+.loved-list-item {
+    width: calc((100% - 28px * 2) / 3);
+    padding: 56px 24px 24px 24px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.10);
+    background: var(--white);
+    box-shadow: 0px 9.049315452575684px 100px 0px rgba(17, 17, 17, 0.03);
+}
 
 .loved-list-title {
     color: var(--black);
@@ -215,6 +389,7 @@ button {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.33;
+    margin-bottom: 24px;
 }
 
 .loved-list-description {
@@ -231,12 +406,20 @@ button {
     font-size: 18px;
     font-family: inherit;
     font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 100px;
+    border: 1px solid var(--orange);
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
 }
 
 /* -------------------- Footer -------------------- */
 
 .footer {
     background: var(--violet);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer-title {
@@ -245,6 +428,21 @@ button {
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: -0.02em;
+    max-width: 300px;
+}
+
+.footer-top {
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+.footer-contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-contacts {
@@ -253,6 +451,7 @@ button {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.29;
+    margin-bottom: 14px;
 }
 
 .footer-address {
@@ -261,7 +460,9 @@ button {
 
 .footer-address-list {}
 
-.footer-address-list-item {}
+.footer-address-list-item:not(:last-child) {
+    margin-bottom: 4px;
+}
 
 .footer-address-link {
     color: var(--white);
@@ -273,7 +474,10 @@ button {
 
 .footer-navigation {}
 
-.footer-menu {}
+.footer-menu {
+    display: flex;
+    gap: 24px;
+}
 
 .footer-menu-item {}
 
