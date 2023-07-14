@@ -1,6 +1,6 @@
 :root {
     --main-font: 'Montserrat', sans-serif;
-    --black: #111;
+    --black: #111111;
     --orange: #FD9222;
     --violet: #1E1823;
     --white: #FFF;
@@ -111,6 +111,7 @@ button {
     /* Align logo icon to be in center */
     display: flex;
     align-items: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-logo-icon {
@@ -121,6 +122,7 @@ button {
 
 .header-logo-accent {
     font-style: italic;
+    margin-right: 6px;
 }
 
 .header-menu {
@@ -169,44 +171,24 @@ button {
 .header-socials {
     display: flex;
     /* Space between socials */
-    gap: 18px
+    gap: 14px;
+    align-items: center;
 }
 
 .header-socials-item {
-    /* height: 24px; */
-    width: 30px;
-    height: 30px;
-}
-
-.header-socials-link {
-    width: 100%;
-    height: 100%;
-    background-color: var(--orange);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 300ms ease-in-out;
-}
-
-.header-socials-link:is(:hover, :focus) {
-    background-color: var(--black);
+    height: 24px;
 }
 
 .header-socials-icon {
-    transition: fill 300ms ease-in-out;
-    width: 20px;
-    height: 20px;
+    transition: stroke 300ms ease-in-out;
+    width: 24px;
+    height: 24px;
     stroke: var(--black);
     fill: none;
 }
 
 .header-socials-link:is(:hover, :focus) .header-socials-icon {
-    fill: var(--orange);
-}
-
-.header-menu-link:is(:hover, :focus) {
-    color: var(--orange);
+    stroke: var(--orange);
 }
 
 /* -------------------- HERO -------------------- */
@@ -261,7 +243,6 @@ button {
     padding: 14px 40px;
     border-radius: 100px;
     border: 1px solid #FFF;
-
 }
 
 .hero-down {
@@ -271,8 +252,27 @@ button {
     line-height: 1.29;
     letter-spacing: -0.03em;
     /* Shift button to the right side */
-    display: block;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.hero-down-arrow {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-down-icon {
+    width: 22px;
+    height: 22px;
+    fill: var(--orange)
 }
 
 /* -------------------- ADVANTAGES -------------------- */
@@ -378,7 +378,6 @@ button {
     padding: 28px 36px 28px 28px;
     position: relative;
     overflow: hidden;
-    /* !@TODO: Add arrow-right icon */
 }
 
 .taste-item:nth-child(4n+1) {
@@ -387,11 +386,27 @@ button {
 
 .taste-item:nth-child(4n+3) {
     background-color: var(--black);
+    border-color: var(--black);
 }
 
 
 .taste-item:nth-child(odd) .taste-item-description {
     color: var(--white);
+}
+
+.taste-item-arrow-icon {
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    stroke: var(--white);
+    fill: none;
+}
+
+.taste-item:nth-child(even) .taste-item-arrow-icon {
+    stroke: var(--orange);
 }
 
 .taste-item-image {
@@ -408,32 +423,30 @@ button {
     text-transform: uppercase;
 }
 
-/* .taste-item-description.light {
-    color: var(--white);
-}
-
-.taste-item-description.dark {
-    color: var(--black);
-} */
-
-.taste-item-over-container {
+.taste-item-cover-container {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     background-color: var(--white);
     height: 100%;
+    width: 100%;
     border-radius: 15px;
     padding: 20px 15px;
-    /* !@TODO: add inside scroll */
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 300ms ease-in-out;
+    /* Add inner scroll */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.taste-item:hover .taste-item-over-container {
+.taste-item:hover .taste-item-cover-container {
     transform: translateY(0);
 }
 
-.taste-item-over-title {
+.taste-item-cover-title {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.29;
@@ -441,13 +454,13 @@ button {
     text-transform: uppercase;
 }
 
-.taste-item-over-buttons {
+.taste-item-cover-buttons {
     display: flex;
     gap: 6px;
     padding: 8px 0 14px;
 }
 
-.taste-item-over-button {
+.taste-item-cover-button {
     padding: 6px 16px;
     font-size: 10px;
     line-height: 1.2;
@@ -456,18 +469,20 @@ button {
     background: var(--gray);
 }
 
-.taste-item-over-button-type {
+.taste-item-cover-button-type {
     color: var(--white);
     background-color: var(--orange);
 }
 
-.taste-item-over-button-benefits {}
+.taste-item-cover-button-benefits {}
 
-.taste-item-over-text {
+.taste-item-cover-text {
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
     color: var(--black);
+    /* Add inner scroll */
+    overflow-y: auto;
 }
 
 /* -------------------- Made -------------------- */
@@ -680,4 +695,61 @@ button {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: -0.02em;
+}
+
+/* -------------------- Modal -------------------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(72, 67, 60, 0.5);
+    transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 517px;
+    min-height: 794px;
+    background-color: var(--gray);
+    border-radius: 15px;
+    transition: transform 500ms ease-in-out;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-150%, -50%) scale(0) rotate(1turn);
+}
+
+.modal-close-icon {
+    width: 100%;
+    height: 100%;
+    stroke: var(--black);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-close-button {
+    position: absolute;
+    border: none;
+    background: none;
+    width: 28px;
+    height: 28px;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.is-hidden {
+    /* Hide it */
+    opacity: 0;
+    /* Disable focus */
+    visibility: hidden;
+    /* Disable interaction */
+    pointer-events: none;
 }
