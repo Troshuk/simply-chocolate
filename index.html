@@ -7,16 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -25,22 +24,22 @@
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="./index.html" class="header-logo link">
-            <span class="header-logo-accent">SIMPLY</span> CHOCOLATE
+            <span class="header-logo-accent">SIMPLY</span>CHOCOLATE
             <svg class="header-logo-icon">
               <use href="./images/icons/icons.svg#icon-logo"></use>
             </svg>
           </a>
           <ul class="header-menu list">
-            <li class="header-menu-item">
+            <li>
               <a href="./index.html" class="header-menu-link link">Home</a>
             </li>
-            <li class="header-menu-item">
+            <li>
               <a href="#made" class="header-menu-link link">How it’s made?</a>
             </li>
-            <li class="header-menu-item">
-              <a href="#loved" class="header-menu-link link"
-                >Chocolate is loved</a
-              >
+            <li>
+              <a href="#loved" class="header-menu-link link">
+                Chocolate is loved
+              </a>
             </li>
           </ul>
         </nav>
@@ -61,7 +60,7 @@
           <li class="header-socials-item">
             <a
               href=""
-              aria-label="instagram"
+              aria-label="facebook"
               target="_blank"
               rel="noopener noreferrer"
               class="header-socials-link link"
@@ -74,7 +73,7 @@
           <li class="header-socials-item">
             <a
               href=""
-              aria-label="instagram"
+              aria-label="twitter"
               target="_blank"
               rel="noopener noreferrer"
               class="header-socials-link link"
@@ -88,7 +87,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero section">
         <div class="container">
           <div class="hero-container">
             <h1 class="hero-title">
@@ -98,7 +97,7 @@
             <div class="hero-buttons">
               <button type="button" class="hero-button">Buy Now</button>
               <a href="#made" class="hero-link link">How it’s made</a>
-              <a href="#footer" class="hero-down link">
+              <a href="#products" class="hero-down link">
                 scroll down
                 <div class="hero-down-arrow">
                   <svg class="hero-down-icon">
@@ -109,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages section">
         <div class="container">
           <h2 class="visually-hidden">Advanatges</h2>
           <ul class="advantages-list list">
@@ -159,7 +158,7 @@
           </ul>
         </div>
       </section>
-      <section class="taste">
+      <section class="taste section">
         <div class="container">
           <h2 class="taste-title section-title">
             it all adds up to one exceptional
@@ -438,7 +437,7 @@
           </ul>
         </div>
       </section>
-      <section id="made" class="made">
+      <section id="made" class="made section">
         <div class="container">
           <h2 class="made-title section-title">
             How it’s <span class="section-title-accent">made?</span>
@@ -491,7 +490,140 @@
           </div>
         </div>
       </section>
-      <section id="loved" class="loved">
+      <section id="products" class="products section">
+        <div class="container">
+          <h2 class="products-title section-title">
+            our <span class="section-title-accent">products</span>
+          </h2>
+          <ul class="products-list list">
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/orange-chocolate.jpg"
+                alt="orange-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">orange</h3>
+              <p class="product-description">Dark chocolate</p>
+              <button type="button" class="product-button">45 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/apple-cranberry-chocolate.jpg"
+                alt="apple-cranberry-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">apple&cranberry</h3>
+              <p class="product-description">Milk chocolate</p>
+              <button type="button" class="product-button">50 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/lime-sea-salt-chocolate.jpg"
+                alt="lime-sea-salt-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">lime&sea salt</h3>
+              <p class="product-description">Dark chocolate</p>
+              <button type="button" class="product-button">66 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/pineapple-chocolate.jpg"
+                alt="pineapple-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">pineapple</h3>
+              <p class="product-description">Dark chocolate</p>
+              <button type="button" class="product-button">54 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/classic-milk-chocolate.jpg"
+                alt="classic-milk-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">classic</h3>
+              <p class="product-description">Milk chocolate</p>
+              <button type="button" class="product-button">45 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/honey-chocolate.jpg"
+                alt="honey-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">honey</h3>
+              <p class="product-description">Milk chocolate</p>
+              <button type="button" class="product-button">50 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/roasted-chocolate.jpg"
+                alt="roasted-fruits-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">roasted fruits</h3>
+              <p class="product-description">Dark chocolate</p>
+              <button type="button" class="product-button">66 uah</button>
+            </li>
+            <li class="product-item">
+              <img
+                src="./images/home-page/products/classic-white-chocolate.jpg"
+                alt="classic-white-chocolate"
+                class="product-image"
+              />
+              <h3 class="product-title">classic</h3>
+              <p class="product-description">White chocolate</p>
+              <button type="button" class="product-button">54 uah</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="top-sellers" class="top-sellers section">
+        <div class="container">
+          <h2 class="top-sellers-title section-title">
+            <span class="section-title-accent">top</span> sellers
+          </h2>
+          <ul class="top-sellers-list list">
+            <li class="top-seller-item">
+              <div class="top-seller-container nuts">
+                <p class="top-seller-description">
+                  Chocolate with nuts is a delectable combination that brings
+                  together the smoothness of chocolate and the crunchiness of
+                  nuts. Whether it's milk chocolate, dark chocolate, or white
+                  chocolate, the addition of nuts adds a whole new dimension of
+                  flavor and texture.
+                </p>
+              </div>
+              <h3 class="top-seller-title">chocolate with nuts</h3>
+            </li>
+            <li class="top-seller-item">
+              <div class="top-seller-container fruits">
+                <p class="top-seller-description">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
+              <h3 class="top-seller-title">chocolate with fruits</h3>
+            </li>
+            <li class="top-seller-item">
+              <div class="top-seller-container dark-chocolate">
+                <p class="top-seller-description">
+                  Dark chocolate is a rich and indulgent treat that is beloved
+                  by many chocolate enthusiasts. It is made from cocoa beans,
+                  which are roasted, ground, and then processed to produce
+                  chocolate liquor. Dark chocolate contains a higher percentage
+                  of cocoa solids compared to milk chocolate.
+                </p>
+              </div>
+              <h3 class="top-seller-title">dark chocolate</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="loved" class="loved section">
         <div class="container">
           <h2 class="loved-title section-title">
             <span class="section-title-accent">chocolate</span> is loved
@@ -544,46 +676,107 @@
     </main>
     <footer id="footer" class="footer">
       <div class="container">
-        <dic class="footer-top">
+        <div class="footer-top">
           <p class="footer-title">
             <span class="section-title-accent">Chocolate</span> a delicious cure
             for a bad day
           </p>
-          <div class="footer-contacts-container">
-            <p class="footer-contacts">Contact us:</p>
-            <address class="footer-address">
-              <ul class="footer-address-list list">
-                <li class="footer-address-list-item">
-                  <a href="tel:+380684439426" class="footer-address-link link"
-                    >+380 (68) 443-94-26</a
-                  >
-                </li>
-                <li class="footer-address-list-item">
-                  <a
-                    href="mailto:simplychoc@gmail.com"
-                    class="footer-address-link link"
-                    >simplychoc@gmail.com</a
-                  >
-                </li>
-              </ul>
-            </address>
+          <div class="footer-contacts">
+            <div class="footer-socials-container">
+              <p class="footer-socials">Social networks</p>
+              <address class="footer-address">
+                <ul class="footer-socials list">
+                  <li class="footer-socials-item">
+                    <a
+                      href=""
+                      aria-label="instagram"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer-socials-link link"
+                    >
+                      <svg class="footer-socials-icon">
+                        <use
+                          href="./images/icons/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer-socials-item">
+                    <a
+                      href=""
+                      aria-label="facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer-socials-link link"
+                    >
+                      <svg class="footer-socials-icon">
+                        <use
+                          href="./images/icons/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer-socials-item">
+                    <a
+                      href=""
+                      aria-label="twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="footer-socials-link link"
+                    >
+                      <svg class="footer-socials-icon">
+                        <use href="./images/icons/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer-contacts-container">
+              <p class="footer-contacts">Contact us:</p>
+              <address class="footer-address">
+                <ul class="footer-address-list list">
+                  <li class="footer-address-list-item">
+                    <a
+                      href="tel:+380684439426"
+                      class="footer-address-link link"
+                    >
+                      +380 (68) 443-94-26
+                    </a>
+                  </li>
+                  <li class="footer-address-list-item">
+                    <a
+                      href="mailto:simplychoc@gmail.com"
+                      class="footer-address-link link"
+                    >
+                      simplychoc@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
           </div>
-        </dic>
-        <nav class="footer-navigation">
-          <ul class="footer-menu list">
-            <li class="footer-menu-item">
-              <a href="./index.html" class="footer-menu-link link">Home</a>
-            </li>
-            <li class="footer-menu-item">
-              <a href="#made" class="footer-menu-link link">How it’s made?</a>
-            </li>
-            <li class="footer-menu-item">
-              <a href="#loved" class="footer-menu-link link"
-                >Chocolate is loved</a
-              >
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <div class="footer-bottom">
+          <nav class="footer-navigation">
+            <ul class="footer-menu list">
+              <li class="footer-menu-item">
+                <a href="./index.html" class="footer-menu-link link">Home</a>
+              </li>
+              <li class="footer-menu-item">
+                <a href="#made" class="footer-menu-link link">How it’s made?</a>
+              </li>
+              <li class="footer-menu-item">
+                <a href="#loved" class="footer-menu-link link"
+                  >Chocolate is loved</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="subscribe-form">
+            <button type="button" class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
