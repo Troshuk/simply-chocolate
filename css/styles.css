@@ -8,6 +8,10 @@
     --violet: #1E1823;
     --white: #FFF;
     --gray: #FAFAFA;
+    --light-orange: #FCF1E0;
+    /* RGBA collors */
+    --rgba-black: 17, 17, 17;
+    --rgba-white: 255, 255, 255;
 
     /* Container configurations */
     --container-width: 1136px;
@@ -110,21 +114,16 @@ button {
 
 /* -------------------- HEADER -------------------- */
 
-.header {
-    padding-top: 24px;
-    padding-bottom: 32px;
-}
+.header {}
 
 .header-container {
     display: flex;
-    align-items: center;
     /* Gap between navigation and socials */
     gap: 90px;
 }
 
 .header-navigation {
     display: flex;
-    align-items: center;
     /* Make header to take the most of the space */
     flex-grow: 1;
     /* Align content to have an even space between */
@@ -141,11 +140,11 @@ button {
     /* Align logo icon to be in center */
     display: flex;
     align-items: center;
+    padding-top: 24px;
+    padding-bottom: 32px;
 }
 
 .header-logo-icon {
-    width: 24px;
-    height: 24px;
     margin-left: 4px;
 }
 
@@ -161,10 +160,14 @@ button {
 }
 
 .header-menu-link {
+    display: block;
+    height: 100%;
+    padding-top: 28px;
+    padding-bottom: 36px;
     color: var(--black);
     font-size: 14px;
     font-weight: 500;
-    line-height: 1.14px;
+    line-height: 1.15;
     letter-spacing: -0.02em;
     transition: color var(--transition-time) var(--transition-function);
 }
@@ -174,10 +177,11 @@ button {
 }
 
 .header-socials {
+    padding-top: 24px;
+    padding-bottom: 32px;
     display: flex;
     /* Space between socials */
     gap: 14px;
-    align-items: center;
 }
 
 .header-socials-item {
@@ -186,8 +190,6 @@ button {
 
 .header-socials-icon {
     transition: stroke var(--transition-time) var(--transition-function);
-    width: 24px;
-    height: 24px;
     stroke: var(--black);
     fill: none;
 }
@@ -203,10 +205,10 @@ button {
 }
 
 .hero-container {
-    background-color: rgba(17, 17, 17, 0.60);
+    background-color: rgba(var(--rgba-black), 0.60);
     background-image:
-        linear-gradient(180deg, rgba(17, 17, 17, 0.00), rgba(17, 17, 17, 0.40)),
-        url(../images/home-page/chocolate-hero.jpg);
+        linear-gradient(180deg, rgba(var(--rgba-black), 0.00), rgba(var(--rgba-black), 0.40)),
+        url(../images/chocolate-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -248,7 +250,7 @@ button {
 }
 
 .hero-button:is(:hover, :focus) {
-    background-color: #FCF1E0;
+    background-color: var(--light-orange);
     color: var(--orange);
 }
 
@@ -296,8 +298,6 @@ button {
 }
 
 .hero-down-icon {
-    width: 22px;
-    height: 22px;
     fill: var(--orange);
     transition: fill var(--transition-time) var(--transition-function);
 }
@@ -341,7 +341,7 @@ button {
     width: 62px;
     height: 62px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid rgba(var(--rgba-white), 0.50);
     margin-bottom: 19px;
     display: flex;
     align-items: center;
@@ -349,8 +349,6 @@ button {
 }
 
 .advantages-icon {
-    width: 32px;
-    height: 32px;
     fill: var(--orange);
 }
 
@@ -362,7 +360,7 @@ button {
 }
 
 .advantages-item-description {
-    color: rgba(255, 255, 255, 0.70);
+    color: rgba(var(--rgba-white), 0.70);
     font-size: 14px;
     letter-spacing: -0.02em;
 }
@@ -427,8 +425,6 @@ button {
     position: absolute;
     right: 14px;
     top: 14px;
-    width: 24px;
-    height: 24px;
     stroke: var(--white);
     fill: none;
 }
@@ -439,8 +435,6 @@ button {
 
 .taste-item-image {
     margin-bottom: 36px;
-    width: 214px;
-    height: 160px;
 }
 
 .taste-item-description {
@@ -586,7 +580,7 @@ button {
 
 .product-item {
     border-radius: 15px;
-    border: 1px solid rgba(17, 17, 17, 0.10);
+    border: 1px solid rgba(var(--rgba-black), 0.10);
     background: var(--white);
     padding: 32px 20px;
     display: flex;
@@ -595,10 +589,7 @@ button {
     width: calc((100% - 18px * 3) / 4);
 }
 
-.product-image {
-    width: 230px;
-    height: 201px;
-}
+.product-image {}
 
 .product-title {
     margin-top: 8px;
@@ -611,7 +602,7 @@ button {
 }
 
 .product-description {
-    color: rgba(17, 17, 17, 0.70);
+    color: rgba(var(--rgba-black), 0.70);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -620,7 +611,7 @@ button {
 .product-button {
     margin-top: 18px;
     border-radius: 100px;
-    border: 1px solid rgba(17, 17, 17, 0.10);
+    border: 1px solid rgba(var(--rgba-black), 0.10);
     background: var(--gray);
     padding: 8px 20px;
     font-size: 14px;
@@ -649,32 +640,17 @@ button {
 
 .top-seller-item {
     width: calc((100% - 16px * 2) / 3);
-    max-width: 368px;
 }
 
-.top-seller-container {
-    height: 464px;
+.top-seller-image-container {
+    overflow: hidden;
+    position: relative;
     border-radius: 15px 15px 0px 0px;
-    background-color: lightgray;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* todo Consider make this as image instead of a background */
-.top-seller-container.nuts {
-    background-image: url(../images/home-page/top-sellers/chocolate-with-nuts.jpg);
-}
-
-.top-seller-container.fruits {
-    background-image: url(../images/home-page/top-sellers/chocolate-with-fruits.jpg);
-}
-
-.top-seller-container.dark-chocolate {
-    background-image: url(../images/home-page/top-sellers/dark-chocolate.jpg);
 }
 
 .top-seller-description {
+    position: absolute;
+    top: 0;
     height: 100%;
     color: var(--white);
     font-size: 14px;
@@ -684,8 +660,7 @@ button {
     padding-right: 40px;
     padding-top: 178px;
     opacity: 0;
-    border-radius: 15px 15px 0px 0px;
-    background: linear-gradient(161deg, rgba(253, 253, 255, 0.10) 0%, rgba(8, 2, 21, 0.00) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20));
     backdrop-filter: blur(7.5px);
     transition: opacity var(--transition-time) var(--transition-function);
 }
@@ -696,9 +671,9 @@ button {
 
 .top-seller-title {
     border-radius: 0px 0px 15px 15px;
-    border-right: 1px solid rgba(17, 17, 17, 0.10);
-    border-bottom: 1px solid rgba(17, 17, 17, 0.10);
-    border-left: 1px solid rgba(17, 17, 17, 0.10);
+    border-right: 1px solid rgba(var(--rgba-black), 0.10);
+    border-bottom: 1px solid rgba(var(--rgba-black), 0.10);
+    border-left: 1px solid rgba(var(--rgba-black), 0.10);
     background: var(--white);
     color: var(--black);
     font-size: 18px;
@@ -725,7 +700,6 @@ button {
 .loved-list {
     display: flex;
     flex-wrap: wrap;
-    /* gap: 40px 28px; */
     column-gap: 28px;
     row-gap: 60px;
     margin-bottom: 50px;
@@ -735,15 +709,13 @@ button {
     width: calc((100% - 28px * 2) / 3);
     padding: 56px 24px 24px 24px;
     border-radius: 15px;
-    border: 1px solid rgba(17, 17, 17, 0.10);
+    border: 1px solid rgba(var(--rgba-black), 0.10);
     background: var(--white);
-    box-shadow: 0px 9px 100px 0px rgba(17, 17, 17, 0.03);
+    box-shadow: 0px 9px 100px 0px rgba(var(--rgba-black), 0.03);
     position: relative;
 }
 
 .loved-item-image {
-    width: 80px;
-    height: 80px;
     position: absolute;
     border-radius: 50%;
     top: 0;
@@ -761,7 +733,7 @@ button {
 }
 
 .loved-list-description {
-    color: rgba(17, 17, 17, 0.70);
+    color: rgba(var(--rgba-black), 0.70);
     text-align: center;
     font-size: 14px;
     font-family: Montserrat;
@@ -810,7 +782,7 @@ button {
 .footer-top {
     display: flex;
     padding-bottom: 50px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(var(--rgba-white), 0.10);
     margin-bottom: 24px;
     justify-content: space-between;
 }
@@ -876,8 +848,6 @@ button {
 
 .footer-socials-icon {
     transition: stroke var(--transition-time) var(--transition-function);
-    width: 24px;
-    height: 24px;
     stroke: var(--white);
 }
 
@@ -898,14 +868,18 @@ button {
     gap: 24px;
 }
 
-.footer-menu-item {}
-
 .footer-menu-link {
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: -0.02em;
+    transition: color var(--transition-time) var(--transition-function);
+    padding: 18px 0;
+}
+
+.footer-menu-link:is(:hover, :focus) {
+    color: var(--orange);
 }
 
 .subscribe-form {}
@@ -917,7 +891,15 @@ button {
     background-color: var(--orange);
     padding: 18px 32px;
     border-radius: 100px;
-    background: #FD9222;
+    background: var(--orange);
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--transition-function);
+    transition-property: color, background-color;
+}
+
+.subscribe-button:is(:hover, :focus) {
+    background-color: var(--light-orange);
+    color: var(--orange);
 }
 
 /* -------------------- Modal -------------------- */
@@ -958,8 +940,6 @@ button {
 }
 
 .modal-close-icon {
-    width: 100%;
-    height: 100%;
     stroke: var(--black);
     position: absolute;
     left: 50%;
