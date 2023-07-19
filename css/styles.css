@@ -61,6 +61,17 @@ button {
     line-height: inherit;
     cursor: pointer;
     padding: 0;
+    color: currentColor;
+}
+
+input {
+    font-family: inherit;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 .container {
@@ -1054,6 +1065,7 @@ button {
 .modal-submit:disabled {
     background-color: var(--light-orange);
     color: var(--orange);
+    cursor: not-allowed;
 }
 
 /* .modal-input:focus:invalid,
