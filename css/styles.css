@@ -10,8 +10,9 @@
     --gray: #FAFAFA;
     --light-orange: #FCF1E0;
     /* RGBA collors */
-    --rgba-black: 17, 17, 17;
+    --rgba-dark-gray: 17, 17, 17;
     --rgba-white: 255, 255, 255;
+    --rgba-black: 0, 0, 0;
 
     /* Container configurations */
     --container-width: 1136px;
@@ -136,7 +137,7 @@ button {
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: -0.03em;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(var(--rgba-black), 0.25);
     /* Align logo icon to be in center */
     display: flex;
     align-items: center;
@@ -205,9 +206,9 @@ button {
 }
 
 .hero-container {
-    background-color: rgba(var(--rgba-black), 0.60);
+    background-color: rgba(var(--rgba-dark-gray), 0.60);
     background-image:
-        linear-gradient(180deg, rgba(var(--rgba-black), 0.00), rgba(var(--rgba-black), 0.40)),
+        linear-gradient(180deg, rgba(var(--rgba-dark-gray), 0.00), rgba(var(--rgba-dark-gray), 0.40)),
         url(../images/chocolate-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -580,7 +581,7 @@ button {
 
 .product-item {
     border-radius: 15px;
-    border: 1px solid rgba(var(--rgba-black), 0.10);
+    border: 1px solid rgba(var(--rgba-dark-gray), 0.10);
     background: var(--white);
     padding: 32px 20px;
     display: flex;
@@ -602,7 +603,7 @@ button {
 }
 
 .product-description {
-    color: rgba(var(--rgba-black), 0.70);
+    color: rgba(var(--rgba-dark-gray), 0.70);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -611,7 +612,7 @@ button {
 .product-button {
     margin-top: 18px;
     border-radius: 100px;
-    border: 1px solid rgba(var(--rgba-black), 0.10);
+    border: 1px solid rgba(var(--rgba-dark-gray), 0.10);
     background: var(--gray);
     padding: 8px 20px;
     font-size: 14px;
@@ -660,7 +661,7 @@ button {
     padding-right: 40px;
     padding-top: 178px;
     opacity: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20));
+    background: linear-gradient(180deg, rgba(var(--rgba-black), 0.20), rgba(var(--rgba-black), 0.20));
     backdrop-filter: blur(7.5px);
     transition: opacity var(--transition-time) var(--transition-function);
 }
@@ -671,9 +672,9 @@ button {
 
 .top-seller-title {
     border-radius: 0px 0px 15px 15px;
-    border-right: 1px solid rgba(var(--rgba-black), 0.10);
-    border-bottom: 1px solid rgba(var(--rgba-black), 0.10);
-    border-left: 1px solid rgba(var(--rgba-black), 0.10);
+    border-right: 1px solid rgba(var(--rgba-dark-gray), 0.10);
+    border-bottom: 1px solid rgba(var(--rgba-dark-gray), 0.10);
+    border-left: 1px solid rgba(var(--rgba-dark-gray), 0.10);
     background: var(--white);
     color: var(--black);
     font-size: 18px;
@@ -709,9 +710,9 @@ button {
     width: calc((100% - 28px * 2) / 3);
     padding: 56px 24px 24px 24px;
     border-radius: 15px;
-    border: 1px solid rgba(var(--rgba-black), 0.10);
+    border: 1px solid rgba(var(--rgba-dark-gray), 0.10);
     background: var(--white);
-    box-shadow: 0px 9px 100px 0px rgba(var(--rgba-black), 0.03);
+    box-shadow: 0px 9px 100px 0px rgba(var(--rgba-dark-gray), 0.03);
     position: relative;
 }
 
@@ -733,7 +734,7 @@ button {
 }
 
 .loved-list-description {
-    color: rgba(var(--rgba-black), 0.70);
+    color: rgba(var(--rgba-dark-gray), 0.70);
     text-align: center;
     font-size: 14px;
     font-family: Montserrat;
@@ -913,6 +914,15 @@ button {
     transition: opacity 500ms var(--transition-function), visibility 500ms var(--transition-function);
 }
 
+.is-hidden {
+    /* Hide it */
+    opacity: 0;
+    /* Disable focus */
+    visibility: hidden;
+    /* Disable interaction */
+    pointer-events: none;
+}
+
 .modal {
     position: absolute;
     left: 50%;
@@ -923,6 +933,7 @@ button {
     background-color: var(--gray);
     border-radius: 15px;
     transition: transform 500ms var(--transition-function);
+    padding: 40px;
 }
 
 .backdrop.is-hidden .modal {
@@ -952,11 +963,104 @@ button {
     stroke: var(--orange);
 }
 
-.is-hidden {
-    /* Hide it */
-    opacity: 0;
-    /* Disable focus */
-    visibility: hidden;
-    /* Disable interaction */
-    pointer-events: none;
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 42px;
 }
+
+.modal-title-accent {
+    display: block;
+    color: var(--orange);
+}
+
+.modal-form {}
+
+.modal-field {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.modal-label {
+    display: inline-block;
+    color: rgba(64, 64, 64, 0.30);
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.modal-input-wrap {
+    position: relative;
+}
+
+.modal-input {
+    width: 100%;
+    height: 68px;
+    border-radius: 13px;
+    border: 1.5px solid rgba(var(--rgba-dark-gray), 0.05);
+    box-shadow: 0px 2px 2px 0px rgba(var(--rgba-black), 0.03);
+    padding: 0 10px 0 62px;
+    background-color: transparent;
+    color: #404040;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.modal-input:focus {
+    border-color: var(--orange);
+}
+
+.modal-input:focus+.modal-input-icon {
+    stroke: var(--orange);
+}
+
+.modal-input:focus::placeholder {
+    opacity: 0;
+}
+
+.modal-input::placeholder {
+    color: rgba(64, 64, 64, 0.30);
+}
+
+.modal-input-icon {
+    stroke: var(--black);
+    fill: transparent;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-text-area {
+    height: 137px;
+    padding: 22px 24px;
+    resize: none;
+}
+
+.modal-submit {
+    border-radius: 100px;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 14px 40px;
+}
+
+.modal-submit:disabled {
+    background-color: var(--light-orange);
+    color: var(--orange);
+}
+
+/* .modal-input:focus:invalid,
+.modal-input:invalid {
+    border-color: #E74A3B;
+}
+
+.modal-input:invalid+.modal-input-icon {
+    stroke: #E74A3B;
+} */
