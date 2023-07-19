@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -723,7 +724,14 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-button" data-modal-open>
+          <button
+            type="button"
+            class="loved-button"
+            data-aos="zoom-in-up"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-sine"
+            data-modal-open
+          >
             Leave a review
           </button>
         </div>
@@ -916,5 +924,9 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
