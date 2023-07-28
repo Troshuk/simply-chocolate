@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -26,7 +27,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="./index.html" class="header-logo link">
@@ -94,10 +95,10 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
 
     <main>
-      <section class="hero section">
+      <!-- <section class="hero section">
         <div class="container">
           <div class="hero-container">
             <h1 class="hero-title">
@@ -132,7 +133,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="advantages section">
         <div class="container">
@@ -189,8 +190,10 @@
       <section class="taste section">
         <div class="container">
           <h2 class="taste-title section-title">
-            it all adds up to one exceptional
-            <span class="section-title-accent">taste</span> sensation
+            it all adds up to one <br />
+            exceptional
+            <span class="section-title-accent">taste</span>
+            sensation
           </h2>
           <p class="taste-description">
             At Simply Chocolate, we believe that the secret to exceptional
@@ -472,12 +475,19 @@
             How it’s <span class="section-title-accent">made?</span>
           </h2>
           <div class="made-wrap">
-            <img
-              src="./images/liquid-chocolate.jpg"
-              alt="liquid chocolate"
-              width="600"
-              height="400"
-            />
+            <div class="made-image-container">
+              <img
+                src="./images/liquid-chocolate.jpg"
+                alt="liquid chocolate"
+                width="600"
+                height="400"
+              />
+
+              <svg class="made-play-icon" width="44" height="44">
+                <use href="./images/icons.svg#icon-play"></use>
+              </svg>
+            </div>
+
             <div class="made-content">
               <p class="made-head">
                 Try our chocolates today and<br />
@@ -639,13 +649,12 @@
                   alt="chocolate with nuts"
                   width="368"
                   height="468"
+                  class="top-seller-image"
                 />
                 <p class="top-seller-description">
-                  Chocolate with nuts is a delectable combination that brings
-                  together the smoothness of chocolate and the crunchiness of
-                  nuts. Whether it's milk chocolate, dark chocolate, or white
-                  chocolate, the addition of nuts adds a whole new dimension of
-                  flavor and texture.
+                  Chocolate with nuts is an incredible combination of two taste
+                  pleasures. When delicate and silky chocolate meets crunchy and
+                  tasty nuts, a real culinary pleasure arises.
                 </p>
               </div>
               <h3 class="top-seller-title">chocolate with nuts</h3>
@@ -657,6 +666,7 @@
                   alt="chocolate with fruits"
                   width="368"
                   height="468"
+                  class="top-seller-image"
                 />
                 <p class="top-seller-description">
                   Chocolate with fruit is an unbeatable combination of two of
@@ -674,6 +684,7 @@
                   alt="dark chocolate"
                   width="368"
                   height="468"
+                  class="top-seller-image"
                 />
                 <p class="top-seller-description">
                   Dark chocolate is a rich and indulgent treat that is beloved
@@ -763,9 +774,9 @@
           </p>
           <div class="footer-contacts">
             <div class="footer-socials-container">
-              <p class="footer-socials">Social networks</p>
+              <p class="footer-socials-title">Social networks</p>
               <address class="footer-address">
-                <ul class="footer-socials list">
+                <ul class="footer-socials-list list">
                   <li class="footer-socials-item">
                     <a
                       href=""
@@ -809,7 +820,7 @@
               </address>
             </div>
             <div class="footer-contacts-container">
-              <p class="footer-contacts">Contact us:</p>
+              <p class="footer-contacts-title">Contact us:</p>
               <address class="footer-address">
                 <ul class="footer-address-list list">
                   <li class="footer-address-list-item">
@@ -843,13 +854,23 @@
                 <a href="#made" class="footer-menu-link link">How it’s made?</a>
               </li>
               <li>
-                <a href="#loved" class="footer-menu-link link"
-                  >Chocolate is loved</a
-                >
+                <a href="#products" class="footer-menu-link link">
+                  Our products
+                </a>
+              </li>
+              <li>
+                <a href="#top-sellers" class="footer-menu-link link">
+                  Top sellers
+                </a>
+              </li>
+              <li>
+                <a href="#loved" class="footer-menu-link link">
+                  Chocolate is loved
+                </a>
               </li>
             </ul>
           </nav>
-          <form class="footer-form">
+          <form class="subscribe-form">
             <div class="subscribe-input-wrap">
               <input
                 id="subscribe-email"
@@ -890,7 +911,7 @@
           <span class="modal-title-accent">our chocolate</span>
         </p>
 
-        <form class="modal-form">
+        <form name="modal-form" class="modal-form">
           <label class="modal-field">
             <span class="modal-label">Name</span>
             <span class="modal-input-wrap">

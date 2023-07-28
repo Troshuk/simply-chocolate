@@ -1,0 +1,388 @@
+/** -------------------- Mobile -------------------- */
+
+@media screen and (min-width: 375px) {
+    :root {
+        --container-width: var(--mobile-container-width);
+    }
+
+    /*? -------------------- Footer -------------------- */
+
+    .subscribe-form {
+        flex-wrap: nowrap;
+    }
+
+    .subscribe-input-wrap {
+        width: 207px;
+    }
+}
+
+
+
+/** -------------------- Tablet -------------------- */
+
+
+
+@media screen and (min-width: 768px) {
+    :root {
+        --container-width: var(--tablet-container-width);
+    }
+
+    .section {
+        padding-bottom: 100px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+    }
+
+    /*? -------------------- ADVANTAGES -------------------- */
+
+    .advantages {
+        padding: 50px 0 85px;
+    }
+
+    .advantages-list {
+        gap: 44px 88px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 88px) / 2);
+    }
+
+    /*? -------------------- Taste -------------------- */
+
+    .taste {
+        padding-top: 100px;
+    }
+
+    .taste-title {
+        max-width: 411px;
+    }
+
+    .taste-description {
+        margin-bottom: 50px;
+    }
+
+    .taste-list {
+        gap: 32px;
+    }
+
+    .taste-item {
+        width: calc((100% - 32px) / 2);
+        order: 5;
+    }
+
+    .taste-item:nth-child(1) {
+        order: 1;
+    }
+
+    .taste-item:nth-child(2) {
+        order: 3;
+    }
+
+    .taste-item:nth-child(3) {
+        order: 4;
+    }
+
+    .taste-item:nth-child(4) {
+        order: 2;
+    }
+
+    /*? -------------------- Made -------------------- */
+
+    .made>.container {
+        max-width: 644px;
+    }
+
+    .made-content {
+        padding: 32px;
+    }
+
+    .made-play-icon {
+        width: inherit;
+        height: inherit;
+    }
+
+    .made-head {
+        margin-bottom: 28px;
+    }
+
+    .made-list {
+        max-width: 464px;
+    }
+
+    /*? -------------------- Products -------------------- */
+
+    .products-list {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .product-item {
+        width: calc((100% - 32px) / 2);
+        padding: 32px 53px;
+    }
+
+    /*? -------------------- Top Sellers -------------------- */
+
+    .top-sellers-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .top-seller-item {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .top-seller-image {
+        max-width: 344px;
+    }
+
+    .top-seller-description {
+        padding: 178px 32px 0;
+    }
+
+    .top-seller-title {
+        padding: 28px 0;
+    }
+
+    /*? -------------------- Loved -------------------- */
+
+    .loved-title {
+        margin-bottom: 91px;
+    }
+
+    .loved-list {
+        column-gap: 16px;
+        margin-bottom: 50px;
+    }
+
+    .loved-list-item {
+        width: calc((100% - 16px) / 2);
+    }
+
+    /*? -------------------- Footer -------------------- */
+
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-title {
+        font-size: 28px;
+        line-height: 1.21;
+        margin-bottom: 0;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        margin-bottom: 24px;
+    }
+
+    .footer-contacts {
+        flex-direction: row;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-navigation {
+        margin-bottom: 0;
+    }
+
+    .footer-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+    }
+
+    .subscribe-input-wrap {
+        width: 233px;
+    }
+
+    .subscribe-button {
+        padding: 14px 28px;
+    }
+}
+
+
+
+/** -------------------- Desktop -------------------- */
+
+
+
+@media screen and (min-width: 1166px) {
+    :root {
+        --container-width: var(--desktop-container-width);
+    }
+
+    .section {
+        padding-bottom: 120px;
+    }
+
+    /*? -------------------- ADVANTAGES -------------------- */
+
+    .advantages {
+        padding-bottom: 50px;
+    }
+
+    .advantages-list {
+        padding: 0 18px;
+        gap: 88px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 88px * 2) / 3);
+    }
+
+    .advantages-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -44px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 124px;
+        width: 1px;
+        background-color: var(--white);
+        opacity: 0.5;
+    }
+
+    .advantages-icon-container {
+        margin-bottom: 19px;
+    }
+
+    /*? -------------------- Taste -------------------- */
+
+    .taste {
+        padding-top: 120px;
+    }
+
+    .taste-list {
+        row-gap: 24px;
+    }
+
+    .taste-item {
+        width: calc((100% - 32px * 3) / 4);
+    }
+
+    .taste-item:nth-child(n) {
+        order: initial;
+    }
+
+    .taste-item-image {
+        margin-bottom: 36px;
+        width: 214px;
+        height: 160px;
+    }
+
+    .taste-item-cover-container {
+        padding: 20px 15px;
+    }
+
+    /*? -------------------- Made -------------------- */
+
+    .made>.container {
+        max-width: var(--container-max-width);
+    }
+
+    .made-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .made-image-container {
+        margin-bottom: 0;
+    }
+
+    .made-content {
+        max-width: 516px;
+        padding: 32;
+    }
+
+    .made-head {
+        min-width: 360px;
+        padding-bottom: 0;
+    }
+
+    .made-list {
+        max-width: 429px;
+    }
+
+    .made-list-item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    /*? -------------------- Products -------------------- */
+
+    .products-list {
+        gap: 18px;
+    }
+
+    .product-item {
+        width: calc((100% - 18px * 3) / 4);
+        padding: 32px 20px;
+    }
+
+    /*? -------------------- Top Sellers -------------------- */
+
+    .top-seller-item {
+        width: calc((100% - 16px * 2) / 3);
+    }
+
+    .top-seller-image {
+        /* ! */
+        max-width: inherit;
+    }
+
+    .top-seller-description {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /*? -------------------- Loved -------------------- */
+
+    .loved-list {
+        column-gap: 28px;
+    }
+
+    .loved-list-item {
+        width: calc((100% - 28px * 2) / 3);
+    }
+
+    /*? -------------------- Footer -------------------- */
+
+    .footer-contacts {
+        gap: 50px;
+    }
+
+    .footer-socials-list {
+        gap: 14px;
+    }
+
+    .footer-menu {
+        gap: 24px;
+    }
+
+    .subscribe-input-wrap {
+        width: 313px;
+    }
+
+    .subscribe-input {
+        height: 52px;
+    }
+
+    .subscribe-input-label,
+    .subscribe-input::placeholder {
+        font-size: 18px;
+    }
+
+    .subscribe-button {
+        padding: 17px 32px;
+    }
+}
