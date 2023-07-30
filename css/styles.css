@@ -1081,6 +1081,7 @@ fieldset {
     height: 100%;
     background-color: rgba(var(--rgba-gray), 0.5);
     transition: opacity 500ms var(--transition-function), visibility 500ms var(--transition-function);
+    z-index: 4;
 }
 
 .is-hidden {
