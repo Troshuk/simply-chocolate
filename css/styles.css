@@ -273,7 +273,7 @@ fieldset {
 .socials {
     display: flex;
     gap: 12px;
-    padding-bottom: 60px;
+    position: absolute;
 }
 
 .socials-icon {
