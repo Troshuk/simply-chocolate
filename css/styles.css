@@ -144,6 +144,13 @@ fieldset {
 
 /** -------------------- HEADER -------------------- */
 
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: var(--gray);
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -156,6 +163,7 @@ fieldset {
     flex-grow: 1;
     /* Align content to have an even space between */
     justify-content: space-between;
+    position: relative;
 }
 
 .header-logo {
@@ -193,6 +201,10 @@ fieldset {
     justify-content: center;
     width: 28px;
     height: 28px;
+
+    /* position: fixed;
+    left: calc(50% + (var(--container-max-width) / 2) - 28px);
+    transform: translate(-50%); */
 }
 
 .menu-open-icon {
@@ -266,6 +278,7 @@ fieldset {
 .socials {
     display: flex;
     gap: 12px;
+    padding-bottom: 20px;
 }
 
 .socials-icon {
