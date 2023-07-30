@@ -163,7 +163,6 @@ fieldset {
     flex-grow: 1;
     /* Align content to have an even space between */
     justify-content: space-between;
-    position: relative;
 }
 
 .header-logo {
@@ -201,10 +200,6 @@ fieldset {
     justify-content: center;
     width: 28px;
     height: 28px;
-
-    /* position: fixed;
-    left: calc(50% + (var(--container-max-width) / 2) - 28px);
-    transform: translate(-50%); */
 }
 
 .menu-open-icon {
@@ -278,7 +273,7 @@ fieldset {
 .socials {
     display: flex;
     gap: 12px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 }
 
 .socials-icon {
