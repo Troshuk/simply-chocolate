@@ -31,6 +31,11 @@
 
     /* Background Images */
     --hero-background-image: url(../images/hero/chocolate-hero.jpg);
+
+
+    --header-outer-height: 63px;
+    --header-inner-height: 22px;
+    --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
 }
 
 p,
@@ -146,9 +151,10 @@ fieldset {
 
 .header {
     position: sticky;
-    top: 0;
+    top: -16px;
     z-index: 3;
-    background-color: var(--gray);
+    background-color: rgba(250, 250, 250, 0.9);
+    /* todo add transition for: sticky, open menu, close menu */
 }
 
 .header-container {
@@ -214,6 +220,10 @@ fieldset {
 
 /** -------------------- Menu -------------------- */
 
+.menu.is-hidden {
+    transform: translate(0, -100%);
+}
+
 .menu {
     background-color: #1E1823;
     position: fixed;
@@ -226,6 +236,10 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition:
+        opacity 500ms var(--transition-function),
+        visibility 500ms var(--transition-function),
+        transform 500ms var(--transition-function)
 }
 
 .menu-close-button {
