@@ -17,11 +17,13 @@
     --rgba-gray: 64, 64, 64;
     --rgba-black: 0, 0, 0;
 
-    /* Container configurations */
-    --container-width: 1136px;
+    /* Container device width options */
     --mobile-container-width: 335px;
     --tablet-container-width: 704px;
     --desktop-container-width: 1136px;
+
+    /* Container configurations */
+    --container-width: var(--mobile-container-width);
     --container-side-padding: 15px;
     --container-max-width: calc(var(--container-width) + var(--container-side-padding) * 2);
 
@@ -30,12 +32,7 @@
     --transition-function: ease-in-out;
 
     /* Background Images */
-    --hero-background-image: url(../images/hero/chocolate-hero.jpg);
-
-
-    --header-outer-height: 63px;
-    --header-inner-height: 22px;
-    --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
+    --hero-background-image: url(../images/hero/chocolate-hero-mobile.jpg);
 }
 
 p,
@@ -154,7 +151,6 @@ fieldset {
     top: -16px;
     z-index: 3;
     background-color: rgba(250, 250, 250, 0.9);
-    /* todo add transition for: sticky, open menu, close menu */
 }
 
 .header-container {
