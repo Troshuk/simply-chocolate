@@ -32,7 +32,10 @@
     --transition-function: ease-in-out;
 
     /* Background Images */
-    --hero-background-image: url(../images/hero/chocolate-hero-mobile.jpg);
+    --hero-background-image-1x: url(../images/hero/chocolate-hero-mobile.jpg);
+    --hero-background-image-2x: url(../images/hero/chocolate-hero-mobile-2x.jpg);
+    --hero-background-image-3x: url(../images/hero/chocolate-hero-mobile-3x.jpg);
+    --hero-background-image: var(--hero-background-image-1x);
 }
 
 p,
@@ -318,7 +321,7 @@ fieldset {
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     :root {
-        --hero-background-image: url(../images/hero/chocolate-hero-mobile-2x.jpg);
+        --hero-background-image: var(--hero-background-image-2x)
     }
 }
 
@@ -326,7 +329,7 @@ fieldset {
 (min-resolution: 288dpi),
 (min-resolution: 3dppx) {
     :root {
-        --hero-background-image: url(../images/hero/chocolate-hero-mobile-3x.jpg);
+        --hero-background-image: var(--hero-background-image-3x)
     }
 }
 

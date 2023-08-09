@@ -41,7 +41,9 @@
 @media screen and (min-width: 768px) {
     :root {
         --container-width: var(--tablet-container-width);
-        --hero-background-image: url(../images/hero/chocolate-hero-tablet.jpg);
+        --hero-background-image-1x: url(../images/hero/chocolate-hero-tablet.jpg);
+        --hero-background-image-2x: url(../images/hero/chocolate-hero-tablet-2x.jpg);
+        --hero-background-image-3x: url(../images/hero/chocolate-hero-tablet-3x.jpg);
     }
 
     .section {
@@ -125,22 +127,6 @@
 
     .hero-container {
         padding: 671px 40px 40px;
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        :root {
-            --hero-background-image: url(../images/hero/chocolate-hero-tablet-2x.jpg);
-        }
-    }
-
-    @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-        :root {
-            --hero-background-image: url(../images/hero/chocolate-hero-tablet-3x.jpg);
-        }
     }
 
     .hero-title {
@@ -447,7 +433,9 @@
 @media screen and (min-width: 1166px) {
     :root {
         --container-width: var(--desktop-container-width);
-        --hero-background-image: url(../images/hero/chocolate-hero.jpg);
+        --hero-background-image-1x: url(../images/hero/chocolate-hero.jpg);
+        --hero-background-image-2x: url(../images/hero/chocolate-hero-2x.jpg);
+        --hero-background-image-3x: url(../images/hero/chocolate-hero-3x.jpg);
     }
 
     .section {
@@ -493,22 +481,6 @@
 
     .hero-container {
         padding: 380px 40px 40px 40px;
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        :root {
-            --hero-background-image: url(../images/hero/chocolate-hero-2x.jpg);
-        }
-    }
-
-    @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-        :root {
-            --hero-background-image: url(../images/hero/chocolate-hero-3x.jpg);
-        }
     }
 
     /*? -------------------- ADVANTAGES -------------------- */
